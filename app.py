@@ -1,15 +1,5 @@
-from flask import Flask  # [this is flask module]
+from core import create_app
 
-app = Flask(__name__)
-
-@app.route('/')
-def index()->None:
-    """this is a index file
-    """
-    return "Hello World"
-
-@app.route('/hello')
-def hello()->None:
-    """this is a hello function
-    """
-    return "hey World"
+if __name__ == '__main__':
+    app = create_app()
+    app.run()
